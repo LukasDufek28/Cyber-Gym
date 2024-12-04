@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+{% block content %}
+<section id="home" class="hero">
+    <video id="background-video" autoplay muted loop>
+        <source src="static/videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+        <div class="container">
+            <h2>Transform Your Body, Transform Your Life</h2>
+            <p>Join the best gym in town and achieve your fitness goals today!</p>
+            <a href="/pricing" class="btn">Get Started</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

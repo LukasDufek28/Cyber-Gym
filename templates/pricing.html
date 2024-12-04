@@ -1,0 +1,47 @@
+{% extends '_base.html' %}
+{% block content %}
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2>Membership Plans</h2>
+        <p>Choose the perfect plan for your fitness journey. Whether you're just getting started or are a seasoned gym-goer, we have a plan for you!</p>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic Plan</h3>
+                <p class="price">$19.99/month</p>
+                <ul>
+                    <li>Access to gym equipment</li>
+                    <li>Free Wi-Fi</li>
+                    <li>Locker access</li>
+                    <li>1 group class per week</li>
+                </ul>
+                <a href="/contact" class="btn">Sign Up</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Standard Plan</h3>
+                <p class="price">$39.99/month</p>
+                <ul>
+                    <li>Access to gym equipment</li>
+                    <li>Locker access</li>
+                    <li>Unlimited group classes</li>
+                    <li>1 personal training session per month</li>
+                </ul>
+                <a href="/contact" class="btn">Sign Up</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Premium Plan</h3>
+                <p class="price">$59.99/month</p>
+                <ul>
+                    <li>Access to gym equipment</li>
+                    <li>Unlimited group classes</li>
+                    <li>Unlimited personal training</li>
+                    <li>Sauna and recovery lounge access</li>
+                </ul>
+                <a href="/contact" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
