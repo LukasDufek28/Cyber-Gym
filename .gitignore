@@ -1,3 +1,3 @@
-*.mov
 .venv/
 __pycache__/
+instance/table.db

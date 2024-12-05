@@ -1,7 +1,15 @@
 from flask import Flask
 from flask import render_template
+from forms import PridajClanokFormular
+from models import Clanok, db
 
 app = Flask(__name__)
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///table.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+db.init_app(app)
+
+app.secret_key = "tvoj_krastny_sigma_klucik"
 
 @app.route("/")
 def home():
@@ -15,6 +23,19 @@ def about():
 def pricing():
     return render_template('pricing.html')
 
-@app.route("/contact")
+@app.route('/contact', methods=["POST", "GET"])
 def contact():
-    return render_template('contact.html')
+    f = PridajClanokFormular()
+    if f.validate_on_submit():
+        nc = Clanok(meno=f.meno.data, email=f.email.data, recenzia=f.recenzia.data)
+
+        db.session.add(nc)
+        db.session.commit()
+
+        return render_template('contact.html', form=f, success=True)
+
+    return render_template('contact.html', form=f, success=False)
+
+
+with app.app_context():
+    db.create_all()
