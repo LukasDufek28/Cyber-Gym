@@ -503,3 +503,44 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+
+.members-list {
+    padding: 2rem;
+    background: linear-gradient(135deg, #1E2A47, #243B5E);
+    padding: 80px 20px;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.members-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.member-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.member-box h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.member-box p {
+    margin: 0.2rem 0;
+    font-size: 2rem;
+    color: #666;
+}

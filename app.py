@@ -36,6 +36,11 @@ def contact():
 
     return render_template('contact.html', form=f, success=False)
 
+@app.route("/members")
+def members():
+    members_list = Clanok.query.all()
+    return render_template("members.html", members=members_list)
+
 
 with app.app_context():
     db.create_all()

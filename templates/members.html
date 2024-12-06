@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% block content %}
+<section class="members-list">
+    <div class="container">
+        <h2>Our Members</h2>
+        <div class="members-container">
+            {% for member in members %}
+            <div class="member-box">
+                <p><strong>Name:</strong> {{ member.meno }}</p>
+                <p><strong>Email:</strong> {{ member.email }}</p>
+                <p><strong>Message:</strong> {{ member.recenzia }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Start Your Journey Today!</h2>
+        <p>Join the 3rd biggest gym in Niger and discover how Cyber Gym can transform your life. Sign up for a free trial and experience our top-tier facilities firsthand.</p>
+        <a href="/pricing" class="btn">Join Now</a>
+    </div>
+</section>
+{% endblock %}
